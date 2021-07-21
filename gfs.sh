@@ -33,7 +33,7 @@ fi
 echo "--------$(date)---------"
 echo "  Get Data Date: "${YYYYMMDD}${HH}
 
-filename="http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_1p00.pl?file=gfs.t${HH}z.pgrb2.1p00.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&dir=%2Fgfs.${YYYYMMDD}${HH}"
+filename="https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_1p00.pl?file=gfs.t${HH}z.pgrb2.1p00.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&dir=%2Fgfs.${YYYYMMDD}%2F${HH}%2Fatmos"
 
 
 curl ${filename} -o ${BASE_DIR}/gfs.t00z.pgrb2.1p00.f000 > /dev/null 2>&1
